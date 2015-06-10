@@ -17,7 +17,7 @@ TwoW = 19
 TwoB = 21
 TwoG = 23
 TwoY = 15
-TwoR = 40
+TwoR = 18
 
 # some wiringPi vars to make reading the code easier to read
 
