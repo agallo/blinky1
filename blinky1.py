@@ -81,7 +81,7 @@ def cleanup():
 
 def main():
     setup()
-#    AllBlink(5)
+    AllBlink(5)
     cleanup()
 
 main()
