@@ -82,6 +82,8 @@ def AllOff():
             wiringpi.digitalWrite(p, LOW)
             sleep(.5)
             wiringpi.digitalWrite(p, HIGH)
+        count += 1
+
 
 
 def cleanup():
