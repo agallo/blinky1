@@ -76,6 +76,13 @@ def sequence(repeat):
             sleep(.5)
             wiringpi.digitalWrite(p, HIGH)
 
+def AllOff():
+    while count <= repeat:
+        for p in pins:
+            wiringpi.digitalWrite(p, LOW)
+            sleep(.5)
+            wiringpi.digitalWrite(p, HIGH)
+
 
 def cleanup():
     wiringpi.digitalWrite(OneW, LOW)
@@ -92,7 +99,8 @@ def cleanup():
 
 def main():
     setup()
-    AllBlink(5)
+    AllOff()
+ #   AllBlink(5)
     sequence(5)
     cleanup()
 
