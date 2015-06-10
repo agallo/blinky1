@@ -81,26 +81,15 @@ def AllOff():
         wiringpi.digitalWrite(p, LOW)
 
 
-
-
 def cleanup():
-    wiringpi.digitalWrite(OneW, LOW)
-    wiringpi.digitalWrite(OneB, LOW)
-    wiringpi.digitalWrite(OneG, LOW)
-    wiringpi.digitalWrite(OneY, LOW)
-    wiringpi.digitalWrite(OneR, LOW)
-    wiringpi.digitalWrite(TwoW, LOW)
-    wiringpi.digitalWrite(TwoB, LOW)
-    wiringpi.digitalWrite(TwoG, LOW)
-    wiringpi.digitalWrite(TwoY, LOW)
-    wiringpi.digitalWrite(TwoR, LOW)
+    AllOff()
 
 
 def main():
     setup()
     AllOff()
  #   AllBlink(5)
- #   sequence(5)
+    sequence(5)
     cleanup()
 
 main()
