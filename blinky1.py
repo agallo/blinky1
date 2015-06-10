@@ -72,9 +72,10 @@ def sequence(repeat):
     count = 0
     while count <= repeat:
         for p in pins:
-            wiringpi.digitalWrite(p, LOW)
-            sleep(.5)
             wiringpi.digitalWrite(p, HIGH)
+            sleep(.5)
+            wiringpi.digitalWrite(p, LOW)
+        count += 1
 
 def AllOff():
     for p in pins:
@@ -89,7 +90,7 @@ def main():
     setup()
     AllOff()
  #   AllBlink(5)
-    sequence(5)
+    sequence(3)
     cleanup()
 
 main()
