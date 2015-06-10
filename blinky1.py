@@ -38,7 +38,7 @@ def setup():
     wiringpi.pinMode(TwoY, OUTPUT)
     wiringpi.pinMode(TwoR, OUTPUT)
 
-def Blink(repeat):
+def AllBlink(repeat):
     count = 0
     while count <= repeat:
         wiringpi.digitalWrite(OneW, LOW)
