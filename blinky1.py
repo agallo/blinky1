@@ -41,6 +41,7 @@ def setup():
 def AllBlink(repeat):
     count = 0
     while count <= repeat:
+        print count
         wiringpi.digitalWrite(OneW, LOW)
         wiringpi.digitalWrite(OneB, LOW)
         wiringpi.digitalWrite(OneG, LOW)
@@ -63,7 +64,7 @@ def AllBlink(repeat):
         wiringpi.digitalWrite(TwoY, HIGH)
         wiringpi.digitalWrite(TwoR, HIGH)
         sleep(1)
-        count =+ 1
+        count += 1
 
 
 def cleanup():
