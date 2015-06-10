@@ -76,14 +76,10 @@ def sequence(repeat):
             sleep(.5)
             wiringpi.digitalWrite(p, HIGH)
 
-def AllOff(repeat):
-    count = 0
-    while count <= repeat:
-        for p in pins:
-            wiringpi.digitalWrite(p, LOW)
-            sleep(.5)
-            wiringpi.digitalWrite(p, HIGH)
-        count += 1
+def AllOff():
+    for p in pins:
+        wiringpi.digitalWrite(p, LOW)
+
 
 
 
