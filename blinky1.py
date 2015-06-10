@@ -19,6 +19,8 @@ TwoG = 23
 TwoY = 15
 TwoR = 18
 
+pins = [OneW, OneB, OneG, OneY, OneR, TwoW, TwoB, TwoG, Twoy, TwoR]
+
 # some wiringPi vars to make reading the code easier to read
 
 LOW = 0
@@ -66,6 +68,15 @@ def AllBlink(repeat):
         count += 1
 
 
+def sequence(repeat):
+    count = 0
+    while count <= repeat:
+        for p in pins:
+            wiringpi.digitalWrite(p, LOW)
+            sleep(.5)
+            wiringpi.digitalWrite(p, HIGH)
+
+
 def cleanup():
     wiringpi.digitalWrite(OneW, LOW)
     wiringpi.digitalWrite(OneB, LOW)
@@ -82,6 +93,7 @@ def cleanup():
 def main():
     setup()
     AllBlink(5)
+    sequence(5)
     cleanup()
 
 main()
