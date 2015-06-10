@@ -17,7 +17,7 @@ TwoW = 19
 TwoB = 21
 TwoG = 23
 TwoY = 15
-TwoR = 25
+TwoR = 27
 
 # some wiringPi vars to make reading the code easier to read
 
@@ -38,10 +38,9 @@ def setup():
     wiringpi.pinMode(TwoY, OUTPUT)
     wiringpi.pinMode(TwoR, OUTPUT)
 
-def AllBlink(repeat):
+def Blink(repeat):
     count = 0
     while count <= repeat:
-        print count
         wiringpi.digitalWrite(OneW, LOW)
         wiringpi.digitalWrite(OneB, LOW)
         wiringpi.digitalWrite(OneG, LOW)
